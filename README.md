@@ -1,4 +1,4 @@
-Source code for the [@worldgenbot](https://twitter.com/worldgenbot) account on Twitter. Requires Fabric API.
+Source code for the [@worldgenbot](https://twitter.com/worldgenbot) account on Twitter.
 
 This generates a video, posts it to Twitter, then quits. Intended to be ran at a set interval.
 
