@@ -63,6 +63,8 @@ public class RecordStep implements Step {
 		CLIENT.options.hudHidden = true;
 		window.setScaleFactor(ConfigHelper.CONFIG.overlay.scale);
 
+		PreviewHelper.start();
+
 		for (int index = 0; index < ConfigHelper.CONFIG.video.getFrameCount(); index++) {
 			Mod.LOGGER.info("Capturing frame {}/{}", index + 1, ConfigHelper.CONFIG.video.getFrameCount());
 
@@ -99,6 +101,8 @@ public class RecordStep implements Step {
 				Thread.sleep(10);
 			} catch(InterruptedException error) {}
 		}
+
+		PreviewHelper.end();
 
 		CLIENT.options.hudHidden = lastHudHidden;
 		window.setScaleFactor(lastScaleFactor);
