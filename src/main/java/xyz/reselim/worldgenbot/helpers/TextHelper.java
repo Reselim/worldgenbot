@@ -40,9 +40,8 @@ public final class TextHelper {
 			new TextField(
 				"coords",
 				String.format(
-					"%d / %d / %d",
+					"%d / %d",
 					(long) Math.floor(position.x),
-					(long) Math.floor(position.y),
 					(long) Math.floor(position.z)
 				)
 			)
