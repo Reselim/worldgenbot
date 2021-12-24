@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "worldgenbot",
+  "version": "${version}",
+
+  "name": "@worldgenbot",
+  "description": "Mod for the @worldgenbot account on Twitter.",
+  "authors": [
+    "Reselim"
+  ],
+  "contact": {
+    "homepage": "https://reselim.xyz/",
+    "sources": "https://github.com/Reselim/worldgenbot"
+  },
+
+  "license": "AGPL-3.0",
+  "icon": "assets/worldgenbot/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "xyz.reselim.worldgenbot.Mod"
+    ]
+  },
+  "mixins": [],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {}
+}
