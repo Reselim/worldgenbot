@@ -38,6 +38,7 @@ public class Mod implements ModInitializer {
 
 	private static final List<String> stepNames = List.of(
 		"World Create",
+		"World Fetch",
 		"World Render",
 		"Record",
 		"Transcode",
