@@ -24,18 +24,15 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:0.44.0+1.18"
 
 	// Twitter4J
-	implementation "org.twitter4j:twitter4j-core:4.0.7"
+	include implementation("org.twitter4j:twitter4j-core:4.0.7")
 
 	// Velvet Video
-	implementation "org.slf4j:slf4j-simple:2.0.0-alpha0"
-	implementation "com.github.zakgof:velvet-video:0.5.2"
-	implementation "com.github.zakgof:velvet-video-natives:0.2.8.full"
+	include implementation("org.slf4j:slf4j-simple:2.0.0-alpha0")
+	include implementation("com.github.zakgof:velvet-video:0.5.2")
+	include implementation("com.github.zakgof:velvet-video-natives:0.2.8.full")
 
-	// GSON
-	implementation "com.google.code.gson:gson:2.8.9"
-	
 	// JAVE
-	implementation "ws.schild:jave-all-deps:3.2.0"
+	include implementation("ws.schild:jave-all-deps:3.2.0")
 }
 
 processResources {
