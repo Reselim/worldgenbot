@@ -28,7 +28,7 @@ function processChunk(chunk: any): string {
 	}
 }
 
-scheduleJob("run", "0 */2 * * * *", () => {
+scheduleJob("run", "0 0 */2 * * *", () => {
 	const child = spawn(getGradleWrapper(), [ "runClient" ], {
 		cwd: resolve(__dirname, ".."),
 	})
