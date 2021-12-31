@@ -13,8 +13,10 @@ public class WorldFetchStep implements Step {
 	public void perform(Context context, Next next) {
 		ClientChunkEvents.CHUNK_LOAD.register((clientWorld, chunk) -> {
 			if (!finished) {
+				// For some reason, this equation only works with view distance 12
+				int viewDiameter = CLIENT.options.viewDistance * 2 + 1;
 				int chunkCount = clientWorld.getChunkManager().getLoadedChunkCount();
-				int requiredChunkCount = (CLIENT.options.viewDistance + 1) * 2 - CLIENT.options.viewDistance;
+				int requiredChunkCount = viewDiameter * (viewDiameter - 1);
 
 				if (chunkCount >= requiredChunkCount) {
 					finished = true;
